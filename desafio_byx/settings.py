@@ -185,7 +185,7 @@ CELERY_BEAT_SCHEDULE = {  # scheduler configuration
     'Task_crawler_schedule': {  # whatever the name you want
         'task': 'products.tasks.run_crawler',  # name of task with path
         # crontab() runs the tasks every minute
-        'schedule': crontab(minute='*/5'),
+        'schedule': crontab(minute=0, hour=0),
     },
     'Task_one_schedule': {  # whatever the name you want
         'task': 'products.tasks.task_one',  # name of task with path
